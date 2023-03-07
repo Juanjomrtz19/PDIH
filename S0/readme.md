@@ -1,6 +1,7 @@
 # Seminario 0
 ## Introduccion
-En este seminario veremos como instalar el simulador de DOSBOX, primero instalaremos el simulador con un comando en la terminal en UBUNTU y ejecutamos.
+En este seminario veremos como instalar el simulador de DOSBOX, primero instalaremos el simulador con un comando 
+en la terminal en UBUNTU y ejecutamos.
 ![this is a image](/S0/img/1.png)
 
 ## Archivo de configuración de DOSBOX y ejecutando un juego
