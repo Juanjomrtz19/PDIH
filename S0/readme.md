@@ -1,6 +1,6 @@
 # Seminario 0
 ## Introduccion
-En este seminario veremos como instalar el simulador de DOSBOX, primero instalaremos el simulador con un comando 
+En este seminario veremos como instalar el simulador de DOSBOX, primero instalaremos el simulador con un comando  
 en la terminal en UBUNTU y ejecutamos.
 
 ![this is a image](/S0/img/1.png)
@@ -17,5 +17,5 @@ Ahora vamos a ejecutar el juego del tetris en nuestro simulador.
 Para ello lo haremos igual que en el seminario, lo compilaremos con C.BAT y mostraremos su salida.
 ![this is a image](/S0/img/4.png)
 
-Salida del programa.
+Salida del programa.  
 ![this is a image](/S0/img/5.png)
