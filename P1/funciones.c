@@ -105,7 +105,7 @@ int mi_getche(){
 	 int86(0x21, &inregs, &outregs);
 
 	 caracter = outregs.h.al;
-	 return caracter;
+	 return;
 }
 
 //_________________________OPTATIVOS___________________________
@@ -225,8 +225,12 @@ int main(){
 
 	//dibujarRecuadro(1,1,5,5,1,2);
 
+	/*
 	dibujo();
 	mi_pausa();
+	*/
+
+	mi_getche();
 
 	return;
 }
