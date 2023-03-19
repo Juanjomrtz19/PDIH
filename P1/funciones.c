@@ -198,9 +198,10 @@ void dibujo(){
 
 int main(){
     
+	/*
     gotoxy(3, 5);
     mi_pausa();
-    
+    */
 
    //setvideomode(0x04);  
 
@@ -224,10 +225,8 @@ int main(){
 
 	//dibujarRecuadro(1,1,5,5,1,2);
 
-	/*
 	dibujo();
 	mi_pausa();
-	*/
 
 	return;
 }
