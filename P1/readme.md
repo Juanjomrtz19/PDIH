@@ -48,6 +48,7 @@ El registro ah valdría 0x09, el registro al valdrá c, el registro bl valdrá c
 # Funciones optativas
 - void dibujarRecuadro(int x1, int y1, int x2, int y2, int colort, int colorf): En esta función primero asignamos los nuevos colores elegidos. Y a partir de las coordenadas dadas en los parámetros de la función y
 ayudándonos de la funciones gotoxy para desplazarnos y cputchar para imprimir los caracteres.
+
 ![this is a image](/P1/img/3.png)
 
 - void dibujo(): Esta función pondrá el modo gráfico y dibujará una casa con la ayuda de la función pixel.
