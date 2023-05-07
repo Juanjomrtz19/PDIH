@@ -1,6 +1,6 @@
 import requests
 from meses import meses, meses_numero
-import datetime
+from datetime import datetime, timedelta
 from telepot.loop import MessageLoop
 import telepot
 import time
@@ -10,6 +10,8 @@ import signal
 import sys
 from letras_horas import horas_mysql,expresiones_horas,mensaje_comandos
 import os
+
+
 
 def comprobar_hora(hora):
     hora = datetime.datetime.strptime(hora, '%H:%M:%S').time()
@@ -27,9 +29,6 @@ def signal_handler(sig, frame):
     print('Programa detenido por usuario')
     sys.exit(0)
 
-
-def sendMessage(chat_id, nombre, mensaje, datos):
-    msg = "Hola " + nombre + " le recuerdo que tiene una cita programada para"
 
 signal.signal(signal.SIGINT, signal_handler)
 
@@ -71,7 +70,6 @@ def handle(msg):
     command = msg['text'].upper()
     nombre = msg['from']['first_name']
     nickname = msg['from']['username']
-
     
     #COMANDOS
     if command == "/START":
@@ -201,7 +199,7 @@ def handle(msg):
         bot.sendMessage(chat_id, "Para consultar una cita introduzca el comando /consultarcitas")
     elif command=="HOLA":
         bot.sendMessage(chat_id, 'Hola {} si necesitas mas información pon /start'.format(nombre))
-    elif command.find("NÚMERO DE TELÉFONO")!= -1 or command.find("MÓVIL")!=-1 or command.find("NÚMERO")!=-1 or command.find("MOVIL")!=-1 or command.find("TELEFONO")!=-1 or command.find("NUMERO")!=-1:
+    elif command.find("NÚMERO DE TELÉFONO")!= -1 or command.find("MÓVIL")!=-1 or command.find("NÚMERO")!=-1 or command.find("MOVIL")!=-1 or command.find("TELÉFONO")!=-1 or command.find("NUMERO")!=-1:
         bot.sendMessage(chat_id, "El número de teléfono por si quieres obtener aun más información o discriminas a los bots y por eso no quieres hablar conmigo es 673246236")
     elif command.find("CHISTE") != -1:
         num = random.randint(1, 80)
@@ -216,9 +214,9 @@ def handle(msg):
 
 bot = telepot.Bot(os.environ.get('API_KEY'))
 
-
 MessageLoop(bot, handle).run_as_thread()
 print('Bot ready')
+
 
 
 while 1:
