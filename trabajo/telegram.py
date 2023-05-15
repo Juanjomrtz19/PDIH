@@ -1,6 +1,6 @@
 import requests
 from meses import meses, meses_numero
-from datetime import datetime, timedelta
+import datetime
 from telepot.loop import MessageLoop
 import telepot
 import time
